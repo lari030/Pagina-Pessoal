@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Larissa Rocha Silva — Página Pessoal</title>
+  <meta name="description" content="Ponto de entrada do projeto: escolha entre a versão Bootstrap ou Tailwind da página pessoal." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #F7F7F4; --surface: #FFFFFF; --text: #1C2130; --text-muted: #5B6472;
+      --border: #E1E1DA; --primary: #1B2A4A; --primary-2: #2F4373; --accent: #D98C2B;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root { --bg:#10141F; --surface:#171C2A; --text:#E7E9EE; --text-muted:#9AA3B2; --border:#2A3145; --primary-2:#A9BBE0; --accent:#E8A33D; }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; min-height: 100vh; display: flex; align-items: center; justify-content: center;
+      background: var(--bg); color: var(--text); font-family: "Inter", sans-serif; padding: 2rem;
+    }
+    .wrap { max-width: 640px; text-align: center; }
+    h1 { font-family: "Fraunces", serif; font-size: 2rem; margin-bottom: .5rem; }
+    p.lede { color: var(--text-muted); margin-bottom: 2.5rem; }
+    .options { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
+    .option {
+      flex: 1 1 220px; border: 1px solid var(--border); background: var(--surface);
+      border-radius: 14px; padding: 2rem 1.5rem; text-decoration: none; color: var(--text);
+      transition: border-color .2s ease, transform .2s ease;
+    }
+    .option:hover { border-color: var(--accent); transform: translateY(-3px); }
+    .option .tag { color: var(--accent); font-weight: 700; font-size: .8rem; text-transform: uppercase; letter-spacing: .04em; display:block; margin-bottom:.6rem; }
+    .option h2 { font-family: "Fraunces", serif; font-size: 1.3rem; margin: 0 0 .4rem; }
+    .option p { color: var(--text-muted); font-size: .9rem; margin: 0; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Larissa Rocha Silva</h1>
+    <p class="lede">Página pessoal desenvolvida em duas versões, para comparar frameworks CSS.</p>
+    <div class="options">
+      <a class="option" href="bootstrap/index.html">
+        <span class="tag">Versão 1</span>
+        <h2>Bootstrap</h2>
+        <p>Layout construído com o framework Bootstrap 5.</p>
+      </a>
+      <a class="option" href="outro-framework/index.html">
+        <span class="tag">Versão 2</span>
+        <h2>Tailwind CSS</h2>
+        <p>Mesmo conteúdo, construído com Tailwind CSS.</p>
+      </a>
+    </div>
+  </div>
+</body>
+</html>

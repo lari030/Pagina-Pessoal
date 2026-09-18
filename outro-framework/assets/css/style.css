@@ -1,0 +1,76 @@
+/* =========================================================
+   Larissa Rocha Silva — Página Pessoal (versão Tailwind CSS)
+   ========================================================= */
+
+:root {
+  --bg: #F7F7F4;
+  --surface: #FFFFFF;
+  --surface-2: #EFEFEA;
+  --text: #1C2130;
+  --text-muted: #5B6472;
+  --border: #E1E1DA;
+  --primary: #1B2A4A;
+  --primary-2: #2F4373;
+  --accent: #D98C2B;
+  --accent-soft: #FBEBD4;
+}
+
+.dark {
+  --bg: #10141F;
+  --surface: #171C2A;
+  --surface-2: #1E2436;
+  --text: #E7E9EE;
+  --text-muted: #9AA3B2;
+  --border: #2A3145;
+  --primary: #7C93C7;
+  --primary-2: #A9BBE0;
+  --accent: #E8A33D;
+  --accent-soft: #2A2312;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  transition: background-color .25s ease, color .25s ease;
+}
+
+.font-display {
+  font-family: "Fraunces", Georgia, serif;
+  letter-spacing: -0.01em;
+}
+
+.bg-surface { background: var(--surface); }
+.bg-surface-2 { background: var(--surface-2); }
+.bg-bg { background: var(--bg); }
+.text-main { color: var(--text); }
+.text-muted-c { color: var(--text-muted); }
+.border-c { border-color: var(--border); }
+.text-primary-c { color: var(--primary); }
+.text-primary-2-c { color: var(--primary-2); }
+.text-accent-c { color: var(--accent); }
+.bg-accent-c { background: var(--accent); }
+.bg-accent-soft { background: var(--accent-soft); }
+
+.avatar-badge {
+  background: linear-gradient(160deg, var(--primary), var(--primary-2));
+}
+
+.theme-toggle {
+  border: 1px solid var(--border);
+  background: var(--surface-2);
+  color: var(--text);
+}
+.theme-toggle:hover { border-color: var(--accent); }
+
+.status-progress { background: rgba(58, 90, 156, .12); color: var(--primary-2); }
+.status-done { background: var(--accent-soft); color: var(--accent); }
+
+.nav-link-c { color: var(--text); font-weight: 500; }
+.nav-link-c:hover { color: var(--accent); }
+
+.link-c { color: var(--primary-2); }
+.link-c:hover { color: var(--accent); }

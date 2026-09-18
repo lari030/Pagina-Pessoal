@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Larissa Rocha Silva — Página Pessoal</title>
+  <meta name="description" content="Página pessoal de Larissa Rocha Silva, estudante de Sistemas de Informação e estagiária de Product Owner." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS (via CDN, com dark mode por classe) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { darkMode: 'class' };
+  </script>
+
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body class="bg-bg text-main">
+
+  <!-- ===== Navbar ===== -->
+  <nav class="sticky top-0 z-30 bg-surface border-b border-c">
+    <div class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="#topo" class="font-display font-semibold text-lg">Larissa Rocha</a>
+      <div class="hidden md:flex items-center gap-6">
+        <a href="#sobre" class="nav-link-c">Sobre</a>
+        <a href="#habilidades" class="nav-link-c">Habilidades</a>
+        <a href="#projetos" class="nav-link-c">Projetos</a>
+        <a href="#contato" class="nav-link-c">Contato</a>
+        <button id="theme-toggle-btn" class="theme-toggle w-10 h-10 rounded-full flex items-center justify-center" aria-label="Alternar tema">🌙</button>
+      </div>
+      <button id="mobile-menu-btn" class="md:hidden theme-toggle w-10 h-10 rounded-full">☰</button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden flex-col gap-1 px-6 pb-4 border-t border-c bg-surface">
+      <a href="#sobre" class="nav-link-c py-2 block">Sobre</a>
+      <a href="#habilidades" class="nav-link-c py-2 block">Habilidades</a>
+      <a href="#projetos" class="nav-link-c py-2 block">Projetos</a>
+      <a href="#contato" class="nav-link-c py-2 block">Contato</a>
+      <button id="theme-toggle-btn-mobile" class="theme-toggle w-full mt-2 py-2 rounded-lg">Alternar tema 🌙</button>
+    </div>
+  </nav>
+
+  <!-- ===== Hero ===== -->
+  <header id="topo" class="border-b border-c">
+    <div class="max-w-5xl mx-auto px-6 py-20 md:py-28 flex flex-col md:flex-row items-center md:items-center gap-8 text-center md:text-left">
+      <div class="avatar-badge w-32 h-32 rounded-full flex items-center justify-center text-white font-display font-semibold text-4xl shadow-lg shrink-0">LR</div>
+      <div>
+        <p class="text-accent-c font-semibold mb-2">Sistemas de Informação · UFLA</p>
+        <h1 class="font-display text-4xl md:text-5xl font-semibold mb-3">Larissa Rocha Silva</h1>
+        <p class="text-muted-c max-w-md mx-auto md:mx-0 mb-6">
+          Estudante de Sistemas de Informação, atuando como estagiária de Product Owner
+          e com interesse principal em gestão de projetos — unindo organização,
+          comunicação e tecnologia para tirar ideias do papel.
+        </p>
+        <div class="flex gap-3 justify-center md:justify-start flex-wrap">
+          <a href="#contato" class="bg-accent-c text-[#1C1408] font-semibold px-5 py-2.5 rounded-lg">Fale comigo</a>
+          <a href="#projetos" class="border border-c font-semibold px-5 py-2.5 rounded-lg text-main">Ver projetos</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== Sobre ===== -->
+  <section id="sobre" class="border-b border-c">
+    <div class="max-w-5xl mx-auto px-6 py-16 md:py-20">
+      <h2 class="font-display text-3xl font-semibold mb-2">Sobre</h2>
+      <p class="text-muted-c max-w-xl mb-10">Um pouco da minha trajetória e do que move meu interesse por gestão de projetos.</p>
+      <div class="grid md:grid-cols-12 gap-8">
+        <p class="md:col-span-7 text-[1.05rem] leading-relaxed max-w-[62ch]">
+          Sou estudante de Sistemas de Informação na UFLA, atualmente atuando como
+          estagiária de Product Owner. Gosto de estar no ponto de encontro entre
+          tecnologia e pessoas: entender problemas, priorizar o que realmente importa
+          e ajudar times a entregar valor de forma organizada. Tenho buscado aprofundar
+          meus conhecimentos em Scrum e em boas práticas de gestão de projetos, além de
+          seguir desenvolvendo minhas habilidades técnicas em programação e banco de dados.
+        </p>
+        <div class="md:col-span-5 grid grid-cols-2 gap-3">
+          <div class="bg-surface border border-c rounded-xl p-4">
+            <div class="text-xs text-muted-c mb-1">Cursando</div>
+            <div class="font-semibold">Sistemas de Informação</div>
+          </div>
+          <div class="bg-surface border border-c rounded-xl p-4">
+            <div class="text-xs text-muted-c mb-1">Atuação atual</div>
+            <div class="font-semibold">Estagiária em Product Owner</div>
+          </div>
+          <div class="bg-surface border border-c rounded-xl p-4">
+            <div class="text-xs text-muted-c mb-1">Instituição</div>
+            <div class="font-semibold">UFLA</div>
+          </div>
+          <div class="bg-surface border border-c rounded-xl p-4">
+            <div class="text-xs text-muted-c mb-1">Área de interesse</div>
+            <div class="font-semibold">Gestão de Projetos</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Habilidades ===== -->
+  <section id="habilidades" class="border-b border-c">
+    <div class="max-w-5xl mx-auto px-6 py-16 md:py-20">
+      <h2 class="font-display text-3xl font-semibold mb-2">Habilidades</h2>
+      <p class="text-muted-c max-w-xl mb-10">Organizadas como um quadro, do jeito que gosto de pensar em prioridades.</p>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-surface border border-c rounded-xl p-6">
+          <div class="flex items-center gap-2 font-semibold text-primary-2-c mb-4">
+            <span class="w-2 h-2 rounded-full bg-accent-c"></span>Linguagens &amp; Dados
+          </div>
+          <div class="bg-surface-2 rounded-lg px-3 py-2.5 mb-2">Java</div>
+          <div class="bg-surface-2 rounded-lg px-3 py-2.5 mb-2">Python</div>
+          <div class="bg-surface-2 rounded-lg px-3 py-2.5 mb-2">SQL</div>
+          <div class="bg-surface-2 rounded-lg px-3 py-2.5 mb-2">PHP</div>
+          <div class="bg-surface-2 rounded-lg px-3 py-2.5">C++</div>
+        </div>
+        <div class="bg-surface border border-c rounded-xl p-6">
+          <div class="flex items-center gap-2 font-semibold text-primary-2-c mb-4">
+            <span class="w-2 h-2 rounded-full bg-accent-c"></span>Metodologias
+          </div>
+          <div class="bg-surface-2 rounded-lg px-3 py-2.5 mb-2">Scrum</div>
+          <div class="bg-surface-2 rounded-lg px-3 py-2.5 mb-2">Product Owner</div>
+          <div class="bg-surface-2 rounded-lg px-3 py-2.5">Gestão de Projetos</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Projetos ===== -->
+  <section id="projetos" class="border-b border-c">
+    <div class="max-w-5xl mx-auto px-6 py-16 md:py-20">
+      <h2 class="font-display text-3xl font-semibold mb-2">Projetos</h2>
+      <p class="text-muted-c max-w-xl mb-10">Alguns trabalhos desenvolvidos ao longo da faculdade.</p>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-surface border border-c rounded-xl p-6 flex flex-col">
+          <span class="status-done text-xs font-bold px-2.5 py-1 rounded-full self-start mb-3">Concluído</span>
+          <h3 class="font-semibold text-lg mb-2">Med Control</h3>
+          <p class="text-muted-c text-sm flex-grow">Sistema web para gerenciamento de consultas médicas, com fluxos distintos para assistente, médico e paciente (cadastro, agendamento, diagnósticos e histórico). Desenvolvido em equipe para Engenharia de Software.</p>
+          <div class="text-xs text-muted-c border-t border-c pt-3 mt-3">PHP · CSS &nbsp;·&nbsp; <a href="https://github.com/lari030/med-control" target="_blank" rel="noopener" class="link-c">ver no GitHub</a></div>
+        </div>
+        <div class="bg-surface border border-c rounded-xl p-6 flex flex-col">
+          <span class="status-done text-xs font-bold px-2.5 py-1 rounded-full self-start mb-3">Concluído</span>
+          <h3 class="font-semibold text-lg mb-2">Ganhadores do Oscar</h3>
+          <p class="text-muted-c text-sm flex-grow">Sistema em C++ para manipular registros de ganhadores do Oscar a partir de um arquivo CSV: inserção, remoção, busca, ordenação, exportação e armazenamento em arquivo binário. Desenvolvido em equipe para Introdução aos Algoritmos.</p>
+          <div class="text-xs text-muted-c border-t border-c pt-3 mt-3">C++ &nbsp;·&nbsp; <a href="https://github.com/lari030/ganhadores-oscar" target="_blank" rel="noopener" class="link-c">ver no GitHub</a></div>
+        </div>
+        <div class="bg-surface border border-c rounded-xl p-6 flex flex-col">
+          <span class="status-done text-xs font-bold px-2.5 py-1 rounded-full self-start mb-3">Concluído</span>
+          <h3 class="font-semibold text-lg mb-2">Clica Aí</h3>
+          <p class="text-muted-c text-sm flex-grow">Jogo de reflexo: o jogador precisa acertar 15 alvos que aparecem em posições aleatórias antes que o cronômetro de 30 segundos acabe. Desenvolvido individualmente para Programação Web.</p>
+          <div class="text-xs text-muted-c border-t border-c pt-3 mt-3">HTML · CSS · JavaScript &nbsp;·&nbsp; <a href="https://lari030.github.io/Clica-Ai/" target="_blank" rel="noopener" class="link-c">jogar</a> &nbsp;·&nbsp; <a href="https://github.com/lari030/Clica-Ai" target="_blank" rel="noopener" class="link-c">GitHub</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Contato ===== -->
+  <section id="contato">
+    <div class="max-w-5xl mx-auto px-6 py-16 md:py-20">
+      <h2 class="font-display text-3xl font-semibold mb-2">Contato</h2>
+      <p class="text-muted-c max-w-xl mb-10">Vamos conversar sobre tecnologia, projetos ou oportunidades.</p>
+      <div class="grid md:grid-cols-3 gap-4">
+        <a href="mailto:larissarochsil@outlook.pt" class="flex items-center gap-3 bg-surface border border-c rounded-xl px-5 py-4 font-semibold text-main hover:border-[var(--accent)] transition-colors">
+          <span class="bg-surface-2 w-9 h-9 rounded-full flex items-center justify-center">✉️</span>
+          larissarochsil@outlook.pt
+        </a>
+        <a href="https://www.linkedin.com/in/larissa-rocha-317254327" target="_blank" rel="noopener" class="flex items-center gap-3 bg-surface border border-c rounded-xl px-5 py-4 font-semibold text-main hover:border-[var(--accent)] transition-colors">
+          <span class="bg-surface-2 w-9 h-9 rounded-full flex items-center justify-center">in</span>
+          LinkedIn
+        </a>
+        <a href="https://github.com/lari030" target="_blank" rel="noopener" class="flex items-center gap-3 bg-surface border border-c rounded-xl px-5 py-4 font-semibold text-main hover:border-[var(--accent)] transition-colors">
+          <span class="bg-surface-2 w-9 h-9 rounded-full flex items-center justify-center">🐙</span>
+          GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="text-center text-muted-c text-sm py-8">
+    &copy; <span id="year"></span> Larissa Rocha Silva · Versão Tailwind ·
+    <a href="../bootstrap/index.html" class="link-c">ver versão Bootstrap</a>
+  </footer>
+
+  <script src="assets/js/theme.js"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    const mobileBtn = document.getElementById("mobile-menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+    mobileBtn.addEventListener("click", () => mobileMenu.classList.toggle("hidden"));
+    document.getElementById("theme-toggle-btn-mobile").addEventListener("click", () => {
+      document.getElementById("theme-toggle-btn").click();
+    });
+  </script>
+</body>
+</html>

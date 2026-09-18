@@ -1,0 +1,272 @@
+/* =========================================================
+   Larissa Rocha Silva — Página Pessoal (versão Bootstrap)
+   ========================================================= */
+
+:root {
+  --bg: #F7F7F4;
+  --surface: #FFFFFF;
+  --surface-2: #EFEFEA;
+  --text: #1C2130;
+  --text-muted: #5B6472;
+  --border: #E1E1DA;
+  --primary: #1B2A4A;
+  --primary-2: #2F4373;
+  --accent: #D98C2B;
+  --accent-soft: #FBEBD4;
+  --shadow: 0 1px 2px rgba(27, 42, 74, 0.06), 0 8px 24px rgba(27, 42, 74, 0.06);
+}
+
+[data-theme="dark"] {
+  --bg: #10141F;
+  --surface: #171C2A;
+  --surface-2: #1E2436;
+  --text: #E7E9EE;
+  --text-muted: #9AA3B2;
+  --border: #2A3145;
+  --primary: #7C93C7;
+  --primary-2: #A9BBE0;
+  --accent: #E8A33D;
+  --accent-soft: #2A2312;
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 12px 32px rgba(0, 0, 0, 0.35);
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  transition: background-color .25s ease, color .25s ease;
+}
+
+h1, h2, h3, .display-serif {
+  font-family: "Fraunces", Georgia, serif;
+  color: var(--text);
+  letter-spacing: -0.01em;
+}
+
+a { color: var(--primary-2); }
+a:hover { color: var(--accent); }
+
+/* ---------- Navbar ---------- */
+.navbar-custom {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+
+.navbar-custom .nav-link {
+  color: var(--text);
+  font-weight: 500;
+}
+
+.navbar-custom .nav-link:hover { color: var(--accent); }
+
+.navbar-brand-custom {
+  font-family: "Fraunces", serif;
+  font-weight: 600;
+  color: var(--text) !important;
+}
+
+.theme-toggle {
+  border: 1px solid var(--border);
+  background: var(--surface-2);
+  color: var(--text);
+  border-radius: 999px;
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+.theme-toggle:hover { border-color: var(--accent); }
+
+/* ---------- Hero ---------- */
+.hero {
+  padding: 6rem 0 4rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.hero-tagline {
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.hero-lede {
+  color: var(--text-muted);
+  max-width: 46ch;
+  font-size: 1.1rem;
+}
+
+.avatar-badge {
+  width: 132px;
+  height: 132px;
+  border-radius: 50%;
+  background: linear-gradient(160deg, var(--primary), var(--primary-2));
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Fraunces", serif;
+  font-size: 2.6rem;
+  font-weight: 600;
+  box-shadow: var(--shadow);
+  flex-shrink: 0;
+}
+
+.btn-accent {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #1C1408;
+  font-weight: 600;
+}
+.btn-accent:hover {
+  background: #C67C1F;
+  border-color: #C67C1F;
+  color: #1C1408;
+}
+
+.btn-outline-custom {
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-weight: 600;
+  background: transparent;
+}
+.btn-outline-custom:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* ---------- Section headings ---------- */
+.section { padding: 4.5rem 0; border-bottom: 1px solid var(--border); }
+.section:last-of-type { border-bottom: none; }
+
+.section-title { margin-bottom: .5rem; }
+.section-sub { color: var(--text-muted); max-width: 60ch; margin-bottom: 2.5rem; }
+
+/* ---------- Sobre: fact board ---------- */
+.fact-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.25rem 1.4rem;
+  height: 100%;
+}
+.fact-label {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: .35rem;
+}
+.fact-value { font-weight: 600; font-size: 1.02rem; }
+
+/* ---------- Habilidades: colunas estilo quadro ---------- */
+.board-col {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  height: 100%;
+}
+.board-col-title {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--primary-2);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+.board-col-title .dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: var(--accent);
+  display: inline-block;
+}
+.skill-chip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: .6rem .75rem;
+  border-radius: 8px;
+  background: var(--surface-2);
+  margin-bottom: .55rem;
+  font-size: .92rem;
+}
+.skill-chip:last-child { margin-bottom: 0; }
+
+/* ---------- Projetos ---------- */
+.project-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.6rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.status-pill {
+  align-self: flex-start;
+  font-size: .72rem;
+  font-weight: 700;
+  padding: .25rem .6rem;
+  border-radius: 999px;
+  margin-bottom: .9rem;
+}
+.status-done { background: var(--accent-soft); color: var(--accent); }
+.status-progress { background: rgba(58, 90, 156, .12); color: var(--primary-2); }
+
+.project-card h3 { font-size: 1.15rem; margin-bottom: .5rem; }
+.project-card p { color: var(--text-muted); font-size: .95rem; flex-grow: 1; }
+.project-card .tech-line {
+  font-size: .8rem;
+  color: var(--text-muted);
+  border-top: 1px solid var(--border);
+  padding-top: .75rem;
+  margin-top: .75rem;
+}
+.edit-flag {
+  font-size: .72rem;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* ---------- Contato ---------- */
+.contact-link {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--surface);
+  color: var(--text);
+  font-weight: 600;
+  text-decoration: none;
+  transition: border-color .2s ease, transform .2s ease;
+}
+.contact-link:hover {
+  border-color: var(--accent);
+  color: var(--text);
+  transform: translateY(-2px);
+}
+.contact-icon {
+  width: 38px; height: 38px;
+  border-radius: 50%;
+  background: var(--surface-2);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+
+footer.site-footer {
+  padding: 2rem 0;
+  color: var(--text-muted);
+  font-size: .88rem;
+}
+
+@media (max-width: 767.98px) {
+  .hero { padding: 3.5rem 0 2.5rem; text-align: center; }
+  .hero .d-flex.hero-flex { flex-direction: column; align-items: center; }
+}
