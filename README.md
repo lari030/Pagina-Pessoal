@@ -24,8 +24,7 @@ O arquivo [`index.html`](./index.html) na raiz é uma página de entrada com lin
 
 ## Como visualizar localmente
 
-Basta abrir o arquivo `index.html` (ou os `index.html` dentro de `bootstrap/` e `outro-framework/`)
-diretamente no navegador — não há dependências de build.
+Basta abrir o arquivo `index.html` diretamente no navegador.
 
 ## Publicação (GitHub Pages)
 
