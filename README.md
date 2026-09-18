@@ -30,7 +30,7 @@ Basta abrir o arquivo `index.html` diretamente no navegador.
 
 1. Faça push deste repositório para o GitHub.
 2. Em **Settings → Pages**, selecione a branch `main` e a pasta raiz (`/`).
-3. O site ficará disponível em `https://<seu-usuario>.github.io/<nome-do-repositorio>/`.
+3. O site ficará disponível em (https://github.com/lari030/Pagina-Pessoal/tree/main)
 
 ## Autora
 
